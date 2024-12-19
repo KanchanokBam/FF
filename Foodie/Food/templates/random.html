@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-100 min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <nav class="bg-green-600 text-white px-6 py-3 flex items-center justify-between shadow-md">
+        <a href="{% url 'home' %}" class="text-lg font-bold">Back to Home</a>
+        <h1 class="text-lg font-bold">Random Menu</h1>
+    </nav>
+
+    <!-- Random Menu Section -->
+    <div class="flex flex-col items-center mt-10">
+        <div class="bg-white rounded-lg shadow-lg p-6 w-3/4 text-center">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Here's a Random Dish for You!</h2>
+            
+            <!-- Random Dish Card -->
+            <div class="bg-green-50 p-4 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-green-700">Example Dish</h3>
+                <p class="text-gray-600"><strong>Type:</strong> Main Course</p>
+                <p class="text-gray-600"><strong>Description:</strong> A delicious example dish to enjoy.</p>
+                <p class="text-gray-600"><strong>Price:</strong> 100 THB</p>
+            </div>
+
+            <!-- Randomize Again Button -->
+            <a href="{% url 'random' %}" class="mt-6 inline-block px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+                Randomize Again
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

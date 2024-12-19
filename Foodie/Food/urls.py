@@ -11,6 +11,7 @@ urlpatterns = [
     path('signin/',views.signin, name='signin'), 
     path('logout/', views.logout_view, name='logout'),
     path('home/', views.page1, name='home'),
+    path('random/', views.random_menu, name='random'),
 
 
 ]
