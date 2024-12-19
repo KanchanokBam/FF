@@ -1,0 +1,40 @@
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodie!</title>
+    {% tailwind_css %}
+    <style>
+        body {
+            background-color: #e6f5e8; /* พื้นหลังเขียวอ่อน */
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="bg-green-600 text-white py-4 shadow-md">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Foodie!</h1>
+            <nav class="space-x-4">
+                <a href="#" class="hover:text-green-200">Home</a>
+                <a href="#" class="hover:text-green-200">Random</a>
+                <a href="#" class="hover:text-green-200">About Us</a>
+                <a href="#" class="hover:text-green-200">Contact</a>
+
+                <!-- Logout Button -->
+                <form method="POST" action="{% url 'logout' %}" class="inline">
+                    {% csrf_token %}
+                    <button type="submit" class="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded transition">
+                        Logout
+                    </button>
+                </form>
+            </nav>
+        </div>
+    </header>
+
+
+</body>
+</html>
